@@ -1,0 +1,104 @@
+baseURL: ""
+languageCode: en-us
+title: Srinjoy Mukherjee
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blogs
+      name: Blogs
+      url: /blogs
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
+    - identifier: experiences
+      name: Experiences
+      url: /experiences
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 60
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+  
+  assets: 
+    disableHLJS: true
+    favicon: "/assets/favicon.ico"
+
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Srinjoy Mukherjee"
+    subtitle: "Hi 👋, I'm Srinjoy, an [**MTech in Computer Science and Engineering**](https://csa.iisc.ac.in/) student at the **Indian Institute of Science**. I'm passionate about **Machine Learning**, **Computer Vision** and **Reinforcement Learning**. Apart from above topics, I've some interest in Operating Systems and Computer Architecture. I was summer school student at [**Dept of CSE, IIT BHU**](https://www.iitbhu.ac.in/dept/cse), during which I worked on Image Processing using **OpenCV**.I also got AIR-110 in GATE-2022. When I'm free, I like to watch Youtube videos about technology, read Books and listen to music."
+    imageUrl: "home/me3.png"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:srinjoym98@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/srinjoy-mukherjee/"
+    - name: "github"
+      url: "https://github.com/acejoy"
+    - name: "cv"
+      url: "home/CV_ML.pdf"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
